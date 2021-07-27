@@ -53,7 +53,7 @@ public class Entity implements Serializable {
   private String duration;
   private String currentTime;
   
-  private String assignable;
+  private Entity assignable;
   private String actor;
   private Double normalScore;
   private Double penaltyScore;
@@ -130,7 +130,7 @@ public class Entity implements Serializable {
     return currentTime;
   }
 
-  public String getAssignable() {
+  public Entity getAssignable() {
     return assignable;
   }
 
@@ -448,7 +448,7 @@ public class Entity implements Serializable {
       return this;
     }
     
-    public Builder withAssignable(String assignable) {
+    public Builder withAssignable(Entity assignable) {
       _entity.assignable = assignable;
       return this;
     }
