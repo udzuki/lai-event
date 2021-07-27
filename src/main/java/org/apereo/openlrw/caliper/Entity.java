@@ -64,6 +64,15 @@ public class Entity implements Serializable {
   private String comment;
   private Agent scoredBy;
   
+  // Add properties
+  private int maxAttempts;
+  private Double maxScore;
+  private Instant dateToStartOn;
+  private Instant dateToSubmit;
+  private int count;
+  private Double scoreGiven;
+  private String category;
+
   private Entity() {}
 
   public String getId() {
@@ -170,6 +179,35 @@ public class Entity implements Serializable {
     return scoredBy;
   }
 
+  // Add properties
+  public int getMaxAttempts() {
+    return maxAttempts;
+  }
+
+  public Double getMaxScore() {
+    return maxScore;
+  }
+
+  public Instant getDateToStartOn() {
+    return dateToStartOn;
+  }
+
+  public Instant getDateToSubmit() {
+    return dateToSubmit;
+  }
+
+  public int getCount() {
+    return count;
+  }
+
+  public Double getScoreGiven() {
+    return scoreGiven;
+  }
+
+  public String getCategory() {
+    return category;
+  }
+
   @Override
   public String toString() {
     return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
@@ -205,6 +243,16 @@ public class Entity implements Serializable {
     result = prime * result + ((totalScore == null) ? 0 : totalScore.hashCode());
     result = prime * result + ((type == null) ? 0 : type.hashCode());
     result = prime * result + ((version == null) ? 0 : version.hashCode());
+
+    // Add properties
+    result = prime * result + ((maxAttempts == null) ? 0 : maxAttempts.hashCode());
+    result = prime * result + ((maxScore == null) ? 0 : maxScore.hashCode());
+    result = prime * result + ((dateToStartOn == null) ? 0 : dateToStartOn.hashCode());
+    result = prime * result + ((dateToSubmit == null) ? 0 : dateToSubmit.hashCode());
+    result = prime * result + ((count == null) ? 0 : count.hashCode());
+    result = prime * result + ((scoreGiven == null) ? 0 : scoreGiven.hashCode());
+    result = prime * result + ((category == null) ? 0 : category.hashCode());
+
     return result;
   }
 
@@ -347,6 +395,44 @@ public class Entity implements Serializable {
         return false;
     } else if (!version.equals(other.version))
       return false;
+
+    // Add properties
+    if (maxAttempts == null) {
+      if (other.maxAttempts != null)
+        return false;
+    } else if (!maxAttempts.equals(other.maxAttempts))
+      return false;
+    if (maxScore == null) {
+      if (other.maxScore != null)
+        return false;
+    } else if (!maxScore.equals(other.maxScore))
+      return false;
+    if (dateToStartOn == null) {
+      if (other.dateToStartOn != null)
+        return false;
+    } else if (!dateToStartOn.equals(other.dateToStartOn))
+      return false;
+    if (dateToSubmit == null) {
+      if (other.dateToSubmit != null)
+        return false;
+    } else if (!dateToSubmit.equals(other.dateToSubmit))
+      return false;
+    if (count == null) {
+      if (other.count != null)
+        return false;
+    } else if (!count.equals(other.count))
+      return false;
+    if (scoreGiven == null) {
+      if (other.scoreGiven != null)
+        return false;
+    } else if (!scoreGiven.equals(other.scoreGiven))
+      return false;
+    if (category == null) {
+      if (other.category != null)
+        return false;
+    } else if (!category.equals(other.category))
+      return false;
+
     return true;
   }
 
@@ -495,6 +581,42 @@ public class Entity implements Serializable {
     
     public Builder withScoredBy(Agent scoredBy) {
       _entity.scoredBy = scoredBy;
+      return this;
+    }
+
+    // Add properties
+    public Builder withMaxAttempts(int maxAttempts) {
+      _entity.maxAttempts = maxAttempts;
+      return this;
+    }
+
+    public Builder withMaxScore(Double maxScore) {
+      _entity.maxScore = maxScore;
+      return this;
+    }
+
+    public Builder withDateToStartOn(Instant dateToStartOn) {
+      _entity.dateToStartOn = dateToStartOn;
+      return this;
+    }
+
+    public Builder withDateToSubmit(Instant dateToSubmit) {
+      _entity.dateToSubmit = dateToSubmit;
+      return this;
+    }
+
+    public Builder withCount(int count) {
+      _entity.count = count;
+      return this;
+    }
+
+    public Builder withScoreGiven(Double scoreGiven) {
+      _entity.scoreGiven = scoreGiven;
+      return this;
+    }
+
+    public Builder withCategory(String category) {
+      _entity.category = category;
       return this;
     }
 
