@@ -65,11 +65,11 @@ public class Entity implements Serializable {
   private Agent scoredBy;
   
   // Add properties
-  private int maxAttempts;
+  private Integer maxAttempts;
   private Double maxScore;
   private Instant dateToStartOn;
   private Instant dateToSubmit;
-  private int count;
+  private Integer count;
   private Double scoreGiven;
   private String category;
 
@@ -180,7 +180,7 @@ public class Entity implements Serializable {
   }
 
   // Add properties
-  public int getMaxAttempts() {
+  public Integer getMaxAttempts() {
     return maxAttempts;
   }
 
@@ -196,7 +196,7 @@ public class Entity implements Serializable {
     return dateToSubmit;
   }
 
-  public int getCount() {
+  public Integer getCount() {
     return count;
   }
 
@@ -585,7 +585,7 @@ public class Entity implements Serializable {
     }
 
     // Add properties
-    public Builder withMaxAttempts(int maxAttempts) {
+    public Builder withMaxAttempts(Integer maxAttempts) {
       _entity.maxAttempts = maxAttempts;
       return this;
     }
@@ -605,7 +605,7 @@ public class Entity implements Serializable {
       return this;
     }
 
-    public Builder withCount(int count) {
+    public Builder withCount(Integer count) {
       _entity.count = count;
       return this;
     }
