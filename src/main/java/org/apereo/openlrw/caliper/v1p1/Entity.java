@@ -45,7 +45,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
   @Type(value = DigitalResourceCollection.class, name = "Forum"),  
   @Type(value = DigitalResourceCollection.class, name = "Thread"),
   @Type(value = Message.class, name = "Message"),
-  @Type(value = AssignableDigitalResource.class, name = "AssignableDigitalResourse"), 
+  @Type(value = AssignableDigitalResource.class, name = "AssignableDigitalResource"), 
   @Type(value = AssignableDigitalResource.class, name = "Assessment"), 
   @Type(value = AssignableDigitalResource.class, name = "AssessmentItem"), 
   @Type(value = Attempt.class, name = "Attempt"), 
