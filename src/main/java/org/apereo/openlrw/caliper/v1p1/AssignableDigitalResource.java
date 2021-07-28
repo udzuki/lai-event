@@ -26,9 +26,9 @@ public class AssignableDigitalResource extends DigitalResource {
   protected Instant dateToShow;
   protected Instant dateToStartOn;
   protected Instant dateToSubmit;
-  private int maxAttempts;
-  private int maxSubmits;
-  private int maxScore;
+  private Integer maxAttempts;
+  private Integer maxSubmits;
+  private Integer maxScore;
   
    
   public Instant getDateToActivate() {
@@ -45,13 +45,13 @@ public class AssignableDigitalResource extends DigitalResource {
         return dateToSubmit;
   }
 
-  public int getMaxAttempts() {
+  public Integer getMaxAttempts() {
     return maxAttempts;
   }
-  public int getSubmits() {
+  public Integer getSubmits() {
     return maxSubmits;
   }
-  public int getScore() {
+  public Integer getScore() {
     return maxScore;
   }
 
@@ -162,17 +162,17 @@ public class AssignableDigitalResource extends DigitalResource {
       return this;
     }
 
-   public Builder withMaxScore(int maxScore) {
+   public Builder withMaxScore(Integer maxScore) {
       _digitalresource.maxScore = maxScore;
       return this;
     }
 
-    public Builder withMaxAttempts(int maxAttempts) {
+    public Builder withMaxAttempts(Integer maxAttempts) {
       _digitalresource.maxAttempts = maxAttempts;
       return this;
     }
 
-    public Builder withMaxSubmits(int maxSubmits) {
+    public Builder withMaxSubmits(Integer maxSubmits) {
       _digitalresource.maxSubmits = maxSubmits;
       return this;
     }

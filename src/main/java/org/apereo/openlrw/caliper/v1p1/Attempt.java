@@ -22,7 +22,7 @@ public class Attempt extends Entity {
 
     protected Person assignee;
     protected DigitalResource assignable;
-    protected int count;
+    protected Integer count;
     protected Instant startedAtTime;
     protected Instant endedAtTime;
     protected String duration;
@@ -34,7 +34,7 @@ public class Attempt extends Entity {
     public DigitalResource getAssignable() {
         return assignable;
     }
-    public int getCount() {
+    public Integer getCount() {
         return count;
     }
 
@@ -103,7 +103,7 @@ public class Attempt extends Entity {
             return  this;
         }
         
-        public Builder withCount(int count) {
+        public Builder withCount(Integer count) {
         _attempt.count = count;
         return this;
         }

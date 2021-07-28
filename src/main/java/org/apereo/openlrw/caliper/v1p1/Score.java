@@ -21,8 +21,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 public class Score extends Entity {
 
     protected Attempt attempt;
-    protected double maxScore;
-    protected double scoreGiven;
+    protected Double maxScore;
+    protected Double scoreGiven;
     protected String comment;
     protected Agent scoredBy;
   
@@ -31,10 +31,10 @@ public class Score extends Entity {
         return attempt;
     }
    
-    public double getMaxScore() {
+    public Double getMaxScore() {
         return maxScore;
     }
-    public double getScoreGiven() {
+    public Double getScoreGiven() {
         return scoreGiven;
     }
 
@@ -111,12 +111,12 @@ public class Score extends Entity {
         }
         
 
-        public Builder withMaxScore(double maxScore) {
+        public Builder withMaxScore(Double maxScore) {
         _score.maxScore = maxScore;
         return this;
         }
         
-        public Builder withScoreGiven(double scoreGiven) {
+        public Builder withScoreGiven(Double scoreGiven) {
         _score.scoreGiven = scoreGiven;
         return this;
         }
