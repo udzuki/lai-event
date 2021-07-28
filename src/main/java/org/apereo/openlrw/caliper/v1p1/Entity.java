@@ -73,7 +73,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
   @Type(value = Response.class, name = "TrueFalseResponse"), 
   @Type(value = Score.class, name = "Score"), 
   @Type(value = Result.class, name = "Result"), 
- 
+  @Type(value = SoftwareApplication.class, name = "SoftwareApplication"),
 })
 public class Entity implements Serializable {
 
