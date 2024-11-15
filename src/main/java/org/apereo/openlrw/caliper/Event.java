@@ -27,7 +27,6 @@ public class Event implements Caliper1p0Event {
   
   @JsonProperty("@context")
   private String context;
-  @JsonProperty("@type")
   private String type;
 
   @Override
@@ -173,14 +172,7 @@ public class Event implements Caliper1p0Event {
       return this;
     }
     
-    @JsonProperty("@type") 
     public Builder withType(String type) {
-      _basicEvent.type = type;
-      return this;
-    }
-    
-    @JsonProperty("type")
-    public Builder withV11Type(String type) {
       _basicEvent.type = type;
       return this;
     }

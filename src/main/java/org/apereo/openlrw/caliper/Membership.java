@@ -28,11 +28,9 @@ public class Membership implements Serializable {
   private static final long serialVersionUID = 1L;
   
   @NotNull
-  @JsonProperty("@id")
   private String id;
   
   @NotNull
-  @JsonProperty("@type")
   private String type;
   
   @JsonProperty("@context")
@@ -198,26 +196,12 @@ public class Membership implements Serializable {
   public static class Builder {
     private Membership _membership = new Membership();
     
-    @JsonProperty("@id")
     public Builder withId(String id) {
       _membership.id = id;
       return this;
     }
     
-    @JsonProperty("@type")
     public Builder withType(String type) {
-      _membership.type = type;
-      return this;
-    }
-    
-    @JsonProperty("id")
-    public Builder withV11Id(String id) {
-      _membership.id = id;
-      return this;
-    }
-    
-    @JsonProperty("type")
-    public Builder withV11Type(String type) {
       _membership.type = type;
       return this;
     }

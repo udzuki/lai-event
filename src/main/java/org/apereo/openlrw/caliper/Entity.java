@@ -29,10 +29,8 @@ public class Entity implements Serializable {
   private static final long serialVersionUID = 1L;
 
   @NotNull
-  @JsonProperty("@id")
   private String id;
   
-  @JsonProperty("@type")
   private String type;
   
   @JsonProperty("@context")
@@ -439,26 +437,12 @@ public class Entity implements Serializable {
   public static class Builder {
     Entity _entity = new Entity();
     
-    @JsonProperty("@id")
     public Builder withId(String id) {
       _entity.id = id;
       return this;
     }
     
-    @JsonProperty("@type")
     public Builder withType(String type) {
-      _entity.type = type;
-      return this;
-    }
-    
-    @JsonProperty("id")
-    public Builder withV11Id(String id) {
-      _entity.id = id;
-      return this;
-    }
-    
-    @JsonProperty("type")
-    public Builder withV11Type(String type) {
       _entity.type = type;
       return this;
     }

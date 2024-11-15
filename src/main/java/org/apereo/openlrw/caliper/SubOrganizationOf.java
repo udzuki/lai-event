@@ -28,11 +28,9 @@ public class SubOrganizationOf implements Serializable {
   private static final long serialVersionUID = 1L;
   
   @NotNull
-  @JsonProperty("@id")
   private String id;
   
   @NotNull
-  @JsonProperty("@type")
   private String type;
   
   @JsonProperty("@context")
@@ -197,26 +195,12 @@ public class SubOrganizationOf implements Serializable {
   public static class Builder {
     private SubOrganizationOf _subOrganizationOf = new SubOrganizationOf();
     
-    @JsonProperty("@id")
     public Builder withId(String id) {
       _subOrganizationOf.id = id;
       return this;
     }
     
-    @JsonProperty("@type")
     public Builder withType(String type) {
-      _subOrganizationOf.type = type;
-      return this;
-    }
-    
-    @JsonProperty("id")
-    public Builder withV11Id(String id) {
-      _subOrganizationOf.id = id;
-      return this;
-    }
-    
-    @JsonProperty("type")
-    public Builder withV11Type(String type) {
       _subOrganizationOf.type = type;
       return this;
     }

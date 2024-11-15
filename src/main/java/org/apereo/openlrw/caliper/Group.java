@@ -28,11 +28,9 @@ public class Group implements Serializable {
   private static final long serialVersionUID = 1L;
   
   @NotNull
-  @JsonProperty("@id")
   private String id;
   
   @NotNull
-  @JsonProperty("@type")
   private String type;
   
   @JsonProperty("@context")
@@ -177,26 +175,12 @@ public class Group implements Serializable {
   public static class Builder {
     private Group _group = new Group();
     
-    @JsonProperty("@id")
     public Builder withId(String id) {
       _group.id = id;
       return this;
     }
     
-    @JsonProperty("@type")
     public Builder withType(String type) {
-      _group.type = type;
-      return this;
-    }
-    
-    @JsonProperty("id")
-    public Builder withV11Id(String id) {
-      _group.id = id;
-      return this;
-    }
-    
-    @JsonProperty("type")
-    public Builder withV11Type(String type) {
       _group.type = type;
       return this;
     }

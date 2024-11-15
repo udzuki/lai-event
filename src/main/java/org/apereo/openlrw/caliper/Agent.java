@@ -27,11 +27,9 @@ public class Agent implements Serializable {
   private static final long serialVersionUID = 1L;
   
   @NotNull
-  @JsonProperty("@id")
   private String id;
   
   @NotNull
-  @JsonProperty("@type")
   private String type;
   
   @JsonProperty("@context")
@@ -152,26 +150,12 @@ public class Agent implements Serializable {
   public static class Builder {
     private Agent _agent = new Agent();
     
-    @JsonProperty("@id")
     public Builder withId(String id) {
       _agent.id = id;
       return this;
     }
     
-    @JsonProperty("@type")
     public Builder withType(String type) {
-      _agent.type = type;
-      return this;
-    }
-    
-    @JsonProperty("id")
-    public Builder withV11Id(String id) {
-      _agent.id = id;
-      return this;
-    }
-    
-    @JsonProperty("type")
-    public Builder withV11Type(String type) {
       _agent.type = type;
       return this;
     }
