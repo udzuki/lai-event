@@ -36,7 +36,6 @@ public class Event implements Caliper1p0Event {
 
     Event event = (Event) o;
 
-    if (timeZoneOffset != event.timeZoneOffset) return false;
     if (id != null ? !id.equals(event.id) : event.id != null) return false;
     if (context != null ? !context.equals(event.context) : event.context != null) return false;
     if (type != null ? !type.equals(event.type) : event.type != null) return false;
@@ -66,7 +65,6 @@ public class Event implements Caliper1p0Event {
     result = 31 * result + (group != null ? group.hashCode() : 0);
     result = 31 * result + (membership != null ? membership.hashCode() : 0);
     result = 31 * result + (eventTime != null ? eventTime.hashCode() : 0);
-    result = 31 * result + (int) (timeZoneOffset ^ (timeZoneOffset >>> 32));
     result = 31 * result + (federatedSession != null ? federatedSession.hashCode() : 0);
     return result;
   }
@@ -87,7 +85,6 @@ public class Event implements Caliper1p0Event {
   private Group group;
   private Membership membership;
   private Instant eventTime;
-  private long timeZoneOffset;
   private String federatedSession;
   
   private Event() {}
@@ -144,14 +141,6 @@ public class Event implements Caliper1p0Event {
     return eventTime;
   }
 
-  public long getTimeZoneOffset() {
-    return timeZoneOffset;
-  }
-
-  public void setTimeZoneOffset(long timeZoneOffset) {
-    this.timeZoneOffset = timeZoneOffset;
-  }
-  
   @Override
   public String toString() {
     return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
@@ -228,11 +217,6 @@ public class Event implements Caliper1p0Event {
       return this;
     }
 
-    public Builder withTimeZoneOffset(long timeZoneOffset) {
-      _basicEvent.timeZoneOffset = timeZoneOffset;
-      return this;
-    }
-    
     public Event build() {
       
       if (_basicEvent.agent == null || StringUtils.isBlank(_basicEvent.action)
